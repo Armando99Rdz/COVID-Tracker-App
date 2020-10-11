@@ -1,0 +1,25 @@
+.container {
+  margin: 50px 0px;
+}
+
+.card {
+  margin: 0 2% !important;
+}
+
+.countup{
+  font-weight: bold;
+  font-size: 2.1rem;
+  color: #393939;
+}
+
+.infected {
+  border-bottom: 10px solid #7e3af2;
+}
+
+.recovered {
+  border-bottom: 10px solid #32c48c;
+}
+
+.deaths {
+  border-bottom: 10px solid #d6243f;
+}
