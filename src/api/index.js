@@ -10,6 +10,26 @@ export const fetchData = async () => {
     return { confirmed, recovered, deaths, lastUpdate };
     
   } catch (error) {
-    console.log(error);
+    console.error(error);
+  }
+}
+
+export const fetchDailyData = async () => {
+  try {
+    //const currentDate = new Date();
+    //const formatedDate = 
+    //  `${currentDate.getMonth()}-${currentDate.getDate()}-${currentDate.getFullYear()}`;
+
+    const { data } = await axios.get(`${URL}/daily`);
+    const modifiedData = data.map((dailyData) => ({
+      confirmed: dailyData.confirmed.total,
+      deaths: dailyData.deaths.total,
+      date: dailyData.reportDate,
+    }));
+
+    return modifiedData;
+
+  } catch (error) {
+    console.error(error);
   }
 }

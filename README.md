@@ -6,6 +6,7 @@ Using the public [JSON API](https://github.com/mathdroid/covid-19-api) of John H
 + axios@0.20.0
 + classnames@2.2.6
 + react-chartjs-2@2.10.0
++ chart.js
 + react-countup@4.3.3
 + @material-ui/core@4.11.0
 
