@@ -1,8 +1,8 @@
-### COVID-19 Tracker App
+## COVID-19 Tracker App
 Simple COVID-19 Tracker/Stats Application built with **React** & MaterialUI.
 Using the public [JSON API](https://github.com/mathdroid/covid-19-api) of John Hopkins University CSSE that offers the COVID-19 daily data.
 
-#### Dependencies
+### Dependencies
 + axios@0.20.0
 + classnames@2.2.6
 + react-chartjs-2@2.10.0
@@ -10,6 +10,6 @@ Using the public [JSON API](https://github.com/mathdroid/covid-19-api) of John H
 + @material-ui/core@4.11.0
 
 
-#### License
+### License
 MIT License 2020.<br>
 Los datos consumidos del API (perteneciente a la *Universidad de Johns Hopkins*) no me pertenecen.
