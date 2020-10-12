@@ -11,5 +11,5 @@ Using the public [JSON API](https://github.com/mathdroid/covid-19-api) of John H
 
 
 #### License
-MIT License 2020.
-Los datos consumidos desde la API (perteneciente a la *Universidad de Johns Hopkins*) no pueden ser usado para propósitos comerciales.
+MIT License 2020.<br>
+Los datos consumidos del API (perteneciente a la *Universidad de Johns Hopkins*) no me pertenecen.
