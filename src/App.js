@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Cards, Chart, CountryPicker } from './components'; // components/index.js
+import { Cards, Chart, CountryPicker, Header } from './components'; // components/index.js
 import { fetchData } from './api';
 
 import styles from './App.module.css';
-import coverImage from './img/cover.png';
+//import coverImage from './img/cover.png';
 
 class App extends React.Component {
   state = {
@@ -29,11 +29,13 @@ class App extends React.Component {
   render() {
     const { data, country} = this.state;
     return (
-      <div className={styles.container}>
-        
-        <CountryPicker handleCountryChange={this.handleCountryChange} />
-        <Cards data={data}/>
-        <Chart data={data} country={country}/>
+      <div>
+        <Header />
+        <div className={styles.container}>
+          <CountryPicker handleCountryChange={this.handleCountryChange} />
+          <Cards data={data} />
+          <Chart data={data} country={country}/>
+        </div>
       </div>
     )
   }

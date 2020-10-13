@@ -12,7 +12,9 @@ const Cards = (props) => {
   const { data : { confirmed, recovered, deaths, lastUpdate } }= props;
   if (!confirmed){
     return (
-      <ClipLoader size={40} color={"#123abc"} loading={true} />
+      <ClipLoader 
+        size={40} color={"#123abc"} loading={true} 
+      />
     )
   }
 

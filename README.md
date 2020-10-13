@@ -9,6 +9,10 @@ Using the public [JSON API](https://github.com/mathdroid/covid-19-api) of John H
 + chart.js
 + react-countup@4.3.3
 + @material-ui/core@4.11.0
+##### dev dependencies
++ autoprefixer@10.0.1
++ postcss-cli@8.1.0
++ tailwindcss@1.9.0
 
 
 ### License
