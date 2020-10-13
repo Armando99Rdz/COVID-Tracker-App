@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => {
-  
+  //  
   return (
     <footer class="text-gray-700 body-font bg-gray-100 mt-20 mb-0 pb-0 mt-auto bottom-0">
       <div class="bg-gray-200 mb-0 pb-0">
