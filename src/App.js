@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { Cards, Chart, CountryPicker, Header } from './components'; // components/index.js
+import {  Cards, Chart, CountryPicker, Header, Footer } 
+  from './components'; // components/index.js
+  
 import { fetchData } from './api';
 
 import styles from './App.module.css';
@@ -36,6 +38,7 @@ class App extends React.Component {
           <Cards data={data} />
           <Chart data={data} country={country}/>
         </div>
+        <Footer />
       </div>
     )
   }
