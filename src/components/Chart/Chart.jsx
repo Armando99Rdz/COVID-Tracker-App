@@ -5,7 +5,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 import styles from './Chart.module.css';
 
-const Chart = () => {
+const Chart = ({ data, country }) => {
 
   const [ dailyData, setDailyData ] = useState({});
 
@@ -14,8 +14,8 @@ const Chart = () => {
       setDailyData(await fetchDailyData());
     }
     fetchAPI();
-  });
-
+  }, []);
+  
   const lineChart = (
     //dailyData || dailyData.length
     false
@@ -29,7 +29,7 @@ const Chart = () => {
             borderColor: '#3333ff',
             fill: true
           }, {
-            data: dailyData.map(({ confirmed }) => confirmed),
+            data: dailyData.map(({ deaths }) => deaths),
             label: 'Muertes',
             borderColor: 'red',
             backgroundColor: 'rgba(255, 0, 0, 0.5)',
@@ -41,9 +41,29 @@ const Chart = () => {
     : <ClipLoader size={40} color={"#123abc"} loading={true} />
   );
 
+  const barChart = (
+    data.confirmed
+    ? (
+      <Bar
+        data={{
+          labels: ['Infectados', 'Recuperados', 'Muertes'],
+          datasets: [{
+            label: 'Personas',
+            backgroundColor: ['#7e3af2', '#32c48c', '#d6243f'],
+            data: [data.confirmed.value, data.recovered.value, data.deaths.value]
+          }]
+        }}
+        options={{
+          legend: { display: false },
+          title: { display: true, text: `Estado acutal en ${country}` }
+        }}
+      />
+    ) : <ClipLoader size={40} color={"#123abc"} loading={true} />
+  )
+
   return (
     <div className={styles.container}>
-      {lineChart}
+      { country ? barChart : lineChart }
     </div>
   )
 }
