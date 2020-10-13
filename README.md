@@ -1,8 +1,12 @@
 <img src="./capture.png" />
 
 ## COVID-19 Tracker App
-Simple COVID-19 Tracker/Stats Application built with **React** & MaterialUI.
+Simple COVID-19 Tracker/Stats Application built with **React**.
 Using the public [JSON API](https://github.com/mathdroid/covid-19-api) of John Hopkins University CSSE that offers the COVID-19 daily data.
+
+### use
+- `npm install`
+- `npm start`(dev enviroment).
 
 ### Dependencies
 + axios@0.20.0
